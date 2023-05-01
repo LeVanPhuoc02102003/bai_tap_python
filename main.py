@@ -1,8 +1,6 @@
 from download.facebook import FacebookVideo
 from download.tiktok import TiktokVideo
 from pick import pick
-import sys
-sys.stdout.reconfigure(encoding='utf-8')
 
 option, index = pick(
     ['Facebook', 'TikTok'], 
