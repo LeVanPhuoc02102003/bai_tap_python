@@ -27,6 +27,6 @@ class TiktokVideo(DownloadVideo):
             print('Tai video tiktok that bai!')
             return False
 
-        print('Tai video tiktok thanh cong!!')
+        print('Tai video tiktok thanh cong!')
         return True
         

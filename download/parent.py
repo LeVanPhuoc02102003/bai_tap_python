@@ -7,6 +7,7 @@ class DownloadVideo:
     def __init__(self, url):
         self.url = url
         self.videoURL = ""
+        self.message = ""
 
     @abstractmethod
     def taiVideo(self):

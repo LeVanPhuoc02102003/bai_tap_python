@@ -44,8 +44,8 @@ class FacebookVideo(DownloadVideo):
             response = self._request.get(videoSRC)
             self._luuVideo("video_fb", response.content)
         except:
-            print('Tải video không thành công')
+            print('Tai video that bai!')
             return False
         
-        print('Tải video thành công')
+        print('Tai video thanh cong!')
         return True
