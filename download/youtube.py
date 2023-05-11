@@ -20,7 +20,7 @@ class YoutubeVideo(DownloadVideo):
             return False
 
         self.videoID = data["vid"]
-        return [(value['q'], value['k']) for _, value in data["links"]["mp4"].items()]
+        return [(value['q'], value['k']) for _, value in data["links"]["mp4"].items() if "mp4" in value["q_text"]]
 
     def taiVideo(self, key):
         response = self._request.post("https://www.y2mate.com/mates/convertV2/index", {
