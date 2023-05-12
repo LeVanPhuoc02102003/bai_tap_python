@@ -17,7 +17,8 @@ class FacebookVideo(DownloadVideo):
             .replace("&amp;", "&")
             .replace("&#123;", "{")
             .replace("&#125;", "}")
-            .replace("\\\\", ""))
+            .replace("\\\\", "")
+            .replace("\\", ""))
 
             return re.findall("'src':'(.*?)'", data)[0]
         else:
@@ -43,9 +44,10 @@ class FacebookVideo(DownloadVideo):
             videoSRC = self.laySourceVideo(url, r)
             response = self._request.get(videoSRC)
             self._luuVideo("video_fb", response.content)
+            print('Tai video thanh cong')
+            return True
         except:
             print('Tai video that bai!')
             return False
         
-        print('Tai video thanh cong!')
-        return True
+       
